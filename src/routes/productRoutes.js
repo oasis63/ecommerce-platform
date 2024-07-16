@@ -4,7 +4,6 @@ const { createProduct, getProducts, updateProduct, deleteProduct } = require('..
 const authMiddleware = require('../middlewares/authMiddleware');
 const router = express.Router();
 
-router.post('/auth', authMiddleware, createProduct);
 router.post('/', createProduct);
 router.get('/', getProducts);
 router.put('/:id', authMiddleware, updateProduct);
